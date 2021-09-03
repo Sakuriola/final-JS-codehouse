@@ -1,21 +1,28 @@
 /** @format */
 
 const ProductList = (item) => {
-	let list = document.createElement('ul')
+	let list = document.createElement('div')
 
 	list.className = 'item-product-list-global-container row'
 
 	item.forEach((e) => {
-		let li = document.createElement('li')
+		let li = document.createElement('div')
 		li.className = 'item-product-list-main-container col-xl-3 col-md-6 col-sm-12'
 		li.innerHTML = `<div class='item-product-list'>
-											<div class='item-product-list-image-container'><img class='item-product-list-image' src="${e.image}" alt="${e.name}"></div>
-                      <h5 class='item-product-id'>Codigo: <span class='item-product-list-id'>${e.id}</span></h5>                      
+											<div class='item-product-list-image-container'>
+											<img class='item-product-list-image' src="${e.image}" alt="${e.name}">
+											</div>
+                      <div class='item-product-text-container'>
+											<h5 class='item-product-id'>Codigo: <span class='item-product-list-id'>${e.id}</span></h5>                      
                       <h3 class='item-product-name'><span class='item-product-list-title'>${e.name}</span></h3>
 											<h5 class='item-product-category'>Categoria: <span class='item-product-list-category'>${e.category}</span></h5>
                       <h4 class='item-product-stock'>Stock: <span class='item-product-list-stock'>${e.stock}</span></h4>
                       <h4 class='item-product-price'>Precio: <span class='item-product-list-price'>${e.price}</span></h4>
-                      <button class='add-to-cart-btn'>Agregar al Carrito</button>
+											</div>
+											<div class='add-to-cart-button-container'>
+											<button class='add-to-cart-btn'>Agregar al carrito</button>
+											</div>											
+                      
                     </div>
                    `
 		list.appendChild(li)
@@ -120,24 +127,33 @@ const ModalCart = () => {
 
 		if (cart.length > 0) {
 			const cartDisplayProducts = (data) => {
-				let list = document.createElement('ul')
+				let list = document.createElement('div')
+				list.className = 'item-product-cart-list-global-container row'
+
 				data.forEach((e) => {
-					let li = document.createElement('li')
+					let li = document.createElement('div')
+					li.className = 'item-product-cart-list-main-container col-5'
+
 					li.innerHTML = `
 											<div class='item-product-cart-list'>
-												<img class='item-product-cart-list-image' src="${e.image}" alt="${e.name}" width="600" height="400">
-												<h5>Codigo: <span class='item-product-cart-list-id'>${e.id}</span></h5>
-												<h5>Categoria: <span class='item-product-cart-list-category'>${e.category}</span></h5>
-												<h3>Nombre: <span class='item-product-cart-list-title'>${e.name}</span></h3>
-												<h4>Stock: <span class='item-product-cart-list-stock'>${e.stock}</span></h4>		
-												<h4>Cantidad: <span class='item-product-cart-list-quantity'>${e.quantity}</span></h4>							
-												<h4>Precio por unidad: <span class='item-product-cart-list-price'>${e.price}</span></h4>
+												<div class='item-product-cart-list-image-container'>
+													<img class='item-product-cart-list-image' src="${e.image}" alt="${e.name}">
+												</div>
+												<div class='item-product-cart-text-container'>
+												<h5 class='item-product-cart-id'>Codigo: <span class='item-product-cart-list-id'>${e.id}</span></h5>												
+												<h3 class='item-product-cart-name'>Nombre: <span class='item-product-cart-list-title'>${e.name}</span></h3>
+												<h5 class='item-product-cart-category'>Categoria: <span class='item-product-cart-list-category'>${e.category}</span></h5>
+												<h4 class='item-product-cart-stock'>Stock: <span class='item-product-cart-list-stock'>${e.stock}</span></h4>		
+												<h4 class='item-product-cart-quantity'>Cantidad: <span class='item-product-cart-list-quantity'>${e.quantity}</span></h4>							
+												<h4 class='item-product-cart-unity-price'>Precio por unidad: <span class='item-product-cart-list-price'>${e.price}</span></h4>
+												</div>								
 												<div>
 													<button class='item-product-cart-list-quantity-add'>+</button>
 													<button class='item-product-cart-list-quantity-delete'>-</button>
 												</div>
+												<div class='remove-item-cart-container'>
 												<button class='remove-item-cart'>Eliminar</button>
-												<hr/>
+												</div>												
                     	</div>
                     `
 					list.appendChild(li)
