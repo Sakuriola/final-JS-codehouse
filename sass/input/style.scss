@@ -2,48 +2,63 @@
 
 @import './colors';
 
-.favy-header-container {
+.faby-header-container {
 	display: flex;
 	justify-content: space-between;
 	background-color: $color1;
 	align-items: center;
 }
 
-.favy-logo-container {
+.faby-logo-container {
 	width: 100%;
 	max-width: 140px;
 	padding: 10px;
 }
 
-.favy-main-logo {
+.faby-main-logo {
 	width: 100%;
 }
 
-.favy-main-menu {
+.faby-main-menu {
 	display: flex;
 	margin-bottom: 0;
 }
 
-.favy-main-menu-container {
+.faby-main-menu-container {
 	display: flex;
 	width: 100%;
 	max-width: 500px;
 	justify-content: space-between;
 	padding-right: 30px;
+	align-items: center;
 }
 
-.favy-menu-link {
-	text-decoration: none;
+.faby-menu-link {
+	text-decoration: none !important;
 	color: $color3;
 	transition: 0.3s ease;
+	font-size: 16px;
 }
 
-.favy-menu-link:hover {
+.faby-menu-link:hover {
 	color: $colorHover;
 	transition: 0.3s ease;
 }
 
-.favy-about-us-container {
+.faby-cart-btn {
+	border: transparent;
+	background-color: transparent;
+	padding: 0;
+}
+
+.faby-cart-btn:hover {
+	color: $colorHover;
+	transition: 0.3s ease;
+	border: transparent;
+	background-color: transparent;
+}
+
+.faby-about-us-container {
 	width: 100%;
 	max-width: 950px;
 	margin: auto;
@@ -51,8 +66,70 @@
 	text-align: center;
 }
 
-.favy-shop-container {
+.faby-shop-container {
 	padding-bottom: 20px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.faby-shop-img {
+	border-radius: 60px 6px 60px 6px;
+	transition: 0.5s ease;
+}
+
+.faby-shop-img:hover {
+	border-radius: 6px 60px 6px 60px;
+	transition: 0.5s ease;
+}
+
+.size-modal-global-container .modal-content {
+	border-radius: 20px;
+	padding: 5px;
+}
+
+.size-modal-global-container .modal-header {
+	border-bottom: 0;
+	padding: 15px 20px 0;
+}
+
+.size-modal-global-container .modal-body {
+	cursor: pointer;
+	padding: 20px 20px 0;
+}
+
+.size-modal-global-container .modal-footer {
+	padding: 5px 20px 20px;
+	border-top: 0;
+}
+
+.shop-btn-container {
+	text-align: center;
+	margin: 25px 0 35px;
+}
+
+.shop-btn {
+	color: $color3;
+	font-weight: 600;
+	font-size: 16px;
+	background-color: $color1;
+	transition: 0.5s ease;
+	padding: 10px;
+	border: 1px solid $color1;
+	text-decoration: none !important;
+	border-radius: 5px;
+}
+
+.shop-btn:hover {
+	color: $color1;
+	background-color: $color3;
+	transition: 0.5s ease;
+}
+
+.faby-shop-main-title {
+	margin-bottom: 0;
+	text-align: center;
+	padding: 10px;
+	font-size: 30px;
 }
 
 footer {
@@ -62,77 +139,81 @@ footer {
 	color: $color3;
 }
 
-.favy-footer-container-one {
+.faby-footer-container-one {
 	padding-bottom: 20px;
 }
 
-.favy-footer-container-two {
+.faby-footer-container-two {
 	padding-bottom: 10px;
 }
 
-.favy-footer-menu-link-title {
+.faby-footer-menu-link-title {
 	margin-bottom: 0;
 	font-size: 16px;
 	font-weight: 700;
 	padding-bottom: 10px;
 }
 
-.favy-footer-menu-link {
-	text-decoration: none;
+.faby-footer-menu-link {
+	text-decoration: none !important;
 	color: $color3;
 	transition: 0.3s ease;
 	cursor: pointer;
 }
 
-.favy-footer-menu-link:hover {
+.faby-footer-menu-link:hover {
 	color: $colorHover;
 	transition: 0.3s ease;
 }
 
-.favy-footer-menu-link p {
+.faby-footer-menu-link p {
 	margin-bottom: 0;
 	font-size: 16px;
 	font-weight: 200;
 	padding-bottom: 5px;
 }
 
-.favy-footer-img-title-container {
+.faby-footer-img-title-container {
 	display: flex;
 	align-items: center;
 }
 
-.favy-footer-menu-info-title {
+.faby-footer-menu-info-title {
 	margin-bottom: 0;
 	font-size: 16px;
 	font-weight: 700;
 	padding-bottom: 10px;
 }
 
-.favy-footer-menu-info {
+.faby-footer-menu-info {
 	margin-bottom: 0;
 	font-size: 16px;
 	font-weight: 200;
 	padding-bottom: 5px;
 }
 
-.favy-footer-img-container {
+.faby-footer-img-container {
 	width: 100%;
 	max-width: 70px;
 }
 
-.favy-footer-logo {
+.faby-footer-logo {
 	width: 100%;
 }
 
-.favy-footer-title {
+.faby-footer-title {
 	margin-bottom: 0;
 	padding-left: 10px;
 }
 
-.favy-footer-text-container {
+.faby-footer-text-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.faby-footer-subtitle {
+	margin-bottom: 0;
 }
 
 .rrss-container {
@@ -142,12 +223,12 @@ footer {
 	justify-content: space-between;
 }
 
-.favy-footer-rrss-link {
+.faby-footer-rrss-link {
 	color: $color3;
 	transition: 0.3s ease;
 }
 
-.favy-footer-rrss-link:hover {
+.faby-footer-rrss-link:hover {
 	color: $colorHover;
 	transition: 0.3s ease;
 }

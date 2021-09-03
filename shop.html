@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://kit.fontawesome.com/29fb72fba9.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="./sass/output/output.css" />
+  <title>Favy Store</title>
+</head>
+
+<body>
+  <header>
+    <div class="faby-header-container">
+      <div class="faby-logo-container">
+        <a href="index.html"><img src="img/main-logo.png" alt="Favy Logo" class="faby-main-logo"></a>
+      </div>
+
+      <div class="faby-main-menu-container">
+        <a class="faby-menu-link" href="index.html">Inicio</a>
+        <a class="faby-menu-link" href="#favy-about-us">Nosotros</a>
+        <a class="faby-menu-link" href="./shop.html">Tienda</a>
+        <a class="faby-menu-link" href="#">Contacto</a>
+        <button id="openCartModal" type="button" class="btn btn-primary faby-cart-btn" data-toggle="modal"
+          data-target="#cartModal">
+          Mi carrito: <span id="cartQuantity"></span>
+        </button>
+      </div>
+    </div>
+
+  </header>
+
+  <h2 class="faby-shop-main-title">Favy Clothing</h2>
+  <h2 id="mainLoader">CARGANDO</h2>
+  <div id="productMainList"></div>
+
+  <!-- Modal Stock -->
+  <div class="modal fade" id="stockModal" tabindex="-1" role="dialog" aria-labelledby="stockModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="stockModalLabel">Alerta!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">No hay mas Stock disponible de este producto!</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">
+            Aceptar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Cart -->
+  <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Bolsa de Compras:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="cartListModal"></div>
+        <h2 class="quantity-products-list">
+          Total de Productos: <span id="cartListModalQuantity"></span>
+        </h2>
+        <h2 class="total-products-list">
+          Precio Total: <span id="cartListModalTotal"></span>
+        </h2>
+        <button id="clearCart">Vaciar Carrito</button>
+        <button id="finishCart">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal finish purchase -->
+
+  <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="purchaseModalLabel">Completa tus datos:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <h3>Ingresa tu Email:</h3>
+        <input id="email_user" name="email" />
+        <div class="modal-footer">
+          <button id="finishPurchase" type="button" class="btn btn-primary" data-dismiss="modal">
+            Aceptar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="purchaseModalLabel">Completa tus datos:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <h1>Enhorabuena!</h1>
+        <h3>hemos recibido tu compra, dentro de poco nos comunicaremos contigo.</h3>
+        <div class="modal-footer">
+          <button id="resetParameters" type="button" class="btn btn-primary" data-dismiss="modal">
+            Aceptar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/query.js"></script>
+</body>
+
+</html>

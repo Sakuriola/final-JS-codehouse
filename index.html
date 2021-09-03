@@ -11,29 +11,29 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
     rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="./sass/output/output.css">
-  <title>Document</title>
+  <title>Favy Clothing</title>
 </head>
 
 <body>
   <header>
-    <div class="favy-header-container">
-      <div class="favy-logo-container">
-        <a href="index.html"><img src="img/main-logo.png" alt="Favy Logo" class="favy-main-logo"></a>
+    <div class="faby-header-container">
+      <div class="faby-logo-container">
+        <a href="index.html"><img src="img/main-logo.png" alt="Favy Logo" class="faby-main-logo"></a>
       </div>
 
-      <div class="favy-main-menu-container">
-        <a class="favy-menu-link" href="index.html">Inicio</a>
-        <a class="favy-menu-link" href="#favy-about-us">Nosotros</a>
-        <a class="favy-menu-link" href="#favy-shop">Tienda</a>
-        <a class="favy-menu-link" href="">Contacto</a>
+      <div class="faby-main-menu-container">
+        <a class="faby-menu-link" href="index.html">Inicio</a>
+        <a class="faby-menu-link" href="#favy-about-us">Nosotros</a>
+        <a class="faby-menu-link" href="./shop.html">Tienda</a>
+        <a class="faby-menu-link" href="#">Contacto</a>
       </div>
     </div>
   </header>
 
-  <div id="favy-carousel-controls" class="carousel slide" data-ride="carousel">
+  <div id="faby-carousel-controls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="./img/bannerfavy.1.jpg" alt="First slide">
@@ -53,9 +53,9 @@
     </a>
   </div>
 
-  <div class="favy-about-us-container" id="favy-about-us">
-    <h2 class="favy-about-us-title">Nosotros</h2>
-    <p class="favy-about-us-description">
+  <div class="faby-about-us-container" id="favy-about-us">
+    <h2 class="faby-about-us-title">Nosotros</h2>
+    <p class="faby-about-us-description">
       Favy está dedicada a toda mujer que desee darle un toque chic a su guardarropa con prendas ideales para
       cualquier ocasión.
       Nuestra línea de diseño está enfocada en la comodidad, versatilidad y diversidad de colores, ofreciendo frescura
@@ -65,75 +65,151 @@
     </p>
   </div>
 
-  <div class="favy-shop-container" id="favy-shop">
-    <a href="#bralette" data-toggle="tab"><img src="img/bralette.jpg" alt="Bralette Section"></a>
-    <a href="#panties" data-toggle="tab"><img src="img/panties.jpg" alt="Panties Section"></a>
-    <a href="#others" data-toggle="tab"><img src="img/otros.jpg" alt="Others Section"></a>
-    <a href="#size" class="size-link-button" data-toggle="modal" data-target="#sizeModal"><img
+  <div class="faby-shop-container">
+    <a href="#bralette" data-toggle="tab"><img class="faby-shop-img" src="img/bralette.jpg" alt="Bralette Section"></a>
+    <a href="#panties" data-toggle="tab"><img class="faby-shop-img" src="img/panties.jpg" alt="Panties Section"></a>
+    <a href="#others" data-toggle="tab"><img class="faby-shop-img" src="img/otros.jpg" alt="Others Section"></a>
+    <a href="#size" class="size-link-button" data-toggle="modal" data-target="#sizeModal"><img class="faby-shop-img"
         src="img/guiadetallas.jpg" alt="Guía de tallas"></a>
   </div>
 
-  <footer>
-    <div class="row favy-footer-container-one">
-      <div class="col-3 favy-footer-menu-container">
-        <p class="favy-footer-menu-link-title">Menú</p>
+  <div class="size-modal-global-container">
+    <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
 
-        <a href="index.html" class="favy-footer-menu-link">
+          <div class="modal-header">
+            <h5 class="modal-title">Guía de tallas:</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <section class="tabla" id="tallas">
+              <table class="table table-striped table-hover">
+                <tr>
+                  <th>Talla</th>
+                  <th>Cintura (CM)</th>
+                  <th>Cadera (CM)</th>
+                </tr>
+
+                <tr>
+                  <td>S</td>
+                  <td>65-69</td>
+                  <td>90-94</td>
+                </tr>
+
+                <tr>
+                  <td>M</td>
+                  <td>70-74</td>
+                  <td>95-99</td>
+                </tr>
+
+                <tr>
+                  <td>L</td>
+                  <td>75-79</td>
+                  <td>100-104</td>
+                </tr>
+
+                <tr>
+                  <td>XL</td>
+                  <td>80-84</td>
+                  <td>105-109</td>
+                </tr>
+
+                <tr>
+                  <td>XXL</td>
+                  <td>85-59</td>
+                  <td>110-114</td>
+                </tr>
+
+                <tr>
+                  <td>XXXL</td>
+                  <td>90-94</td>
+                  <td>115-119</td>
+                </tr>
+              </table>
+            </section>
+          </div>
+
+          <div class="modal-footer">
+            <a href="#" class="btn btn-dark btn-sm" data-dismiss="modal">Cerrar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="shop-btn-container">
+    <a class="shop-btn" href="./shop.html">¡Da click para visitar nuestra tienda!</a>
+  </div>
+
+
+  <footer>
+    <div class="row faby-footer-container-one">
+      <div class="col-3 faby-footer-menu-container">
+        <p class="faby-footer-menu-link-title">Menú</p>
+
+        <a href="index.html" class="faby-footer-menu-link">
           <p>Inicio</p>
         </a>
-        <a href="#favy-about-us" class="favy-footer-menu-link">
+        <a href="#faby-about-us" class="faby-footer-menu-link">
           <p>Nosotros</p>
         </a>
-        <a href="#favy-shop" class="favy-footer-menu-link">
+        <a href="#faby-shop" class="faby-footer-menu-link">
           <p>Tienda</p>
         </a>
       </div>
 
-      <div class="col-5 favy-footer-menu-container">
-        <p class="favy-footer-menu-info-title">Contacto</p>
-        <p class="favy-footer-menu-info">Barrio La Ceiba, Cúcuta, Norte de Santander, Colombia</p>
-        <p class="favy-footer-menu-info">Teléfono: +57 0000000000 / +57 0000000000</p>
-        <p class="favy-footer-menu-info">WhatsApp: +57 3125670507 / +57 3167505793</p>
+      <div class="col-5 faby-footer-menu-container">
+        <p class="faby-footer-menu-info-title">Contacto</p>
+        <p class="faby-footer-menu-info">Barrio La Ceiba, Cúcuta, Norte de Santander, Colombia</p>
+        <p class="faby-footer-menu-info">Teléfono: +57 0000000000 / +57 0000000000</p>
+        <p class="faby-footer-menu-info">WhatsApp: +57 3125670507 / +57 3167505793</p>
       </div>
 
-      <div class="col-4 favy-footer-menu-container">
-        <p class="favy-footer-menu-info-title">Redes Sociales</p>
-        <a href="https://web.facebook.com/?_rdc=1&_rdr" class="favy-footer-menu-link">
+      <div class="col-4 faby-footer-menu-container">
+        <p class="faby-footer-menu-info-title">Redes Sociales</p>
+        <a href="https://web.facebook.com/?_rdc=1&_rdr" class="faby-footer-menu-link">
           <p>Facebook: Favyclothing
           </p>
         </a>
-        <a href="https://www.instagram.com/favyclothing/?hl=es" class="favy-footer-menu-link">
+        <a href="https://www.instagram.com/favyclothing/?hl=es" class="faby-footer-menu-link">
           <p>Instagram: @favyclothing</p>
         </a>
-        <p class="favy-footer-menu-info">Correo: favyclothing@gmail.com</p>
+        <p class="faby-footer-menu-info">Correo: favyclothing@gmail.com</p>
       </div>
     </div>
-    <div class="row favy-footer-container-two">
-      <div class="col-3 favy-footer-img-title-container">
-        <div class="favy-footer-img-container">
-          <a href="index.html"><img src="./img/main-logo.png" alt="Favy Logo" class="favy-footer-logo"></a>
+    <div class="row faby-footer-container-two">
+      <div class="col-3 faby-footer-img-title-container">
+        <div class="faby-footer-img-container">
+          <a href="index.html"><img src="./img/main-logo.png" alt="Favy Logo" class="faby-footer-logo"></a>
         </div>
-        <p class="favy-footer-title">Favy</p>
+        <p class="faby-footer-title">Favy</p>
       </div>
 
 
-      <div class="col-9 favy-footer-text-container">
-        <p class="favy-footer-subtitle">©Todos los derechos reservados</p>
+      <div class="col-9 faby-footer-text-container">
+        <p class="faby-footer-subtitle">©Todos los derechos reservados</p>
 
         <div class="rrss-container">
-          <a class="favy-footer-rrss-link" href="https://web.facebook.com/?_rdc=1&_rdr"><i
+          <a class="faby-footer-rrss-link" href="https://web.facebook.com/?_rdc=1&_rdr"><i
               class="fab fa-facebook-f"></i></a>
-          <a class="favy-footer-rrss-link" href="https://www.instagram.com/favyclothing/?hl=es"><i
+          <a class="faby-footer-rrss-link" href="https://www.instagram.com/favyclothing/?hl=es"><i
               class="fab fa-instagram"></i></a>
-          <a class="favy-footer-rrss-link" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+          <a class="faby-footer-rrss-link" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="./js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
-    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 </body>
 
