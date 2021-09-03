@@ -3,15 +3,18 @@
 const ProductList = (item) => {
 	let list = document.createElement('ul')
 
+	list.className = 'item-product-list-global-container row'
+
 	item.forEach((e) => {
 		let li = document.createElement('li')
+		li.className = 'item-product-list-main-container col-xl-3 col-md-6 col-sm-12'
 		li.innerHTML = `<div class='item-product-list'>
-                      <img class='item-product-list-image' src="${e.image}" alt="${e.name}">
-                      <h5>Codigo: <span class='item-product-list-id'>${e.id}</span></h5>
-                      <h5>Categoria: <span class='item-product-list-category'>${e.category}</span></h5>
-                      <h3>Nombre: <span class='item-product-list-title'>${e.name}</span></h3>
-                      <h4>Stock: <span class='item-product-list-stock'>${e.stock}</span></h4>
-                      <h4>Precio: <span class='item-product-list-price'>${e.price}</span></h4>
+											<div class='item-product-list-image-container'><img class='item-product-list-image' src="${e.image}" alt="${e.name}"></div>
+                      <h5 class='item-product-id'>Codigo: <span class='item-product-list-id'>${e.id}</span></h5>                      
+                      <h3 class='item-product-name'><span class='item-product-list-title'>${e.name}</span></h3>
+											<h5 class='item-product-category'>Categoria: <span class='item-product-list-category'>${e.category}</span></h5>
+                      <h4 class='item-product-stock'>Stock: <span class='item-product-list-stock'>${e.stock}</span></h4>
+                      <h4 class='item-product-price'>Precio: <span class='item-product-list-price'>${e.price}</span></h4>
                       <button class='add-to-cart-btn'>Agregar al Carrito</button>
                     </div>
                    `

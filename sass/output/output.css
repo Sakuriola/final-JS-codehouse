@@ -128,11 +128,55 @@
   transition: 0.5s ease;
 }
 
+.faby-shop-global-container {
+  min-height: calc(100vh - 130px);
+}
+
 .faby-shop-main-title {
   margin-bottom: 0;
   text-align: center;
-  padding: 10px;
+  padding: 15px 0;
   font-size: 30px;
+}
+
+.faby-shop-main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 150px);
+}
+
+.faby-shop-main-subtitle {
+  font-size: 50px;
+}
+
+#productMainList {
+  margin: 10px 20px;
+}
+
+.item-product-list-global-container {
+  width: 100%;
+}
+
+.item-product-list-global-container li::marker {
+  display: none !important;
+}
+
+.item-product-list {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+  background-color: #fbfbfb;
+}
+
+.item-product-list-image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
 footer {
