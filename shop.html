@@ -79,20 +79,30 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Bolsa de Compras:</h5>
+          <h5 class="modal-title" id="cartModalLabel">Bolsa de compras</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div id="cartListModal"></div>
-        <h2 class="quantity-products-list">
-          Total de Productos: <span id="cartListModalQuantity"></span>
-        </h2>
-        <h2 class="total-products-list">
-          Precio Total: <span id="cartListModalTotal"></span>
-        </h2>
-        <button id="clearCart">Vaciar Carrito</button>
-        <button id="finishCart">Finalizar Compra</button>
+
+        <div class="faby-cart-quantity-global-container">
+          <div class="faby-cart-quantity-text-container">
+            <h2 class="quantity-products-list">
+              Total de productos: <span id="cartListModalQuantity"></span>
+            </h2>
+            <h2 class="total-products-list">
+              Precio total: <span id="cartListModalTotal"></span>
+            </h2>
+          </div>
+          <div class="faby-cart-quantity-button-container">
+            <button id="clearCart">Vaciar carrito</button>
+            <button id="finishCart">Finalizar compra</button>
+          </div>
+
+        </div>
+
+
       </div>
     </div>
   </div>
