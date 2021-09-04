@@ -65,14 +65,21 @@
   width: 100%;
   max-width: 950px;
   margin: auto;
-  padding: 30px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
 .faby-shop-container {
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: space-around;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+}
+
+.faby-shop-img-container {
+  text-align: center;
+  text-align: center;
+  padding: 10px 10px 30px;
 }
 
 .faby-shop-img {
@@ -168,7 +175,6 @@
   height: auto;
   margin: 15px 0;
   background-color: #fbfbfb;
-  min-height: 500px;
 }
 
 .item-product-list-image {
