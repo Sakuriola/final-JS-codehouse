@@ -156,7 +156,8 @@
 }
 
 .faby-shop-main-subtitle {
-  font-size: 50px;
+  font-size: 35px;
+  font-weight: 700;
 }
 
 #productMainList {
@@ -165,6 +166,12 @@
 
 .item-product-list-global-container {
   width: 100%;
+}
+
+.item-product-list-global-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .item-product-list {
@@ -243,6 +250,8 @@
 .item-product-cart-list-global-container {
   width: 100%;
   margin: auto;
+  list-style: none;
+  padding: 0;
 }
 
 .item-product-cart-list-main-container {
@@ -387,13 +396,20 @@
 }
 
 .quantity-products-list {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 400;
 }
 
 .total-products-list {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 400;
+}
+
+.faby-cart-quantity-button-container {
+  width: 100%;
+  max-width: 290px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #clearCart {
@@ -428,6 +444,208 @@
 
 #finishCart:hover {
   background-color: #ffffff;
+  color: #000000;
+  transition: 0.5s ease;
+}
+
+.faby-empty-cart-global-container {
+  min-height: calc(100vh - 280px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.faby-empty-cart-icon {
+  font-size: 45px;
+  cursor: pointer;
+  color: #000000;
+  transition: 0.5s ease;
+}
+
+.faby-empty-cart-icon:hover {
+  color: #b7b8b6;
+  transition: 0.5s ease;
+}
+
+.faby-empty-cart-title {
+  font-size: 24px;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+.faby-empty-cart-subtitle {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+#stockModal .modal-dialog {
+  max-width: 800px;
+}
+
+#stockModal .modal-header {
+  padding: 15px 20px 0;
+  border-bottom: 0;
+}
+
+#stockModalLabel {
+  font-size: 22px;
+}
+
+#stockModal .modal-body {
+  min-height: calc(100vh - 320px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-stock-title {
+  margin-bottom: 0;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+.modal-stock-subtitle {
+  margin-bottom: 0;
+  font-size: 25px;
+}
+
+#stockModal .modal-footer {
+  border-top: 0;
+  padding: 0 25px 15px;
+}
+
+.stock-modal-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.stock-modal-button:hover {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.5s ease;
+}
+
+#purchaseModal .modal-dialog {
+  max-width: 800px;
+}
+
+#purchaseModal .modal-header {
+  padding: 15px 20px 0;
+  border-bottom: 0;
+}
+
+#purchaseModalLabel {
+  font-size: 22px;
+}
+
+#purchaseModal .modal-body {
+  min-height: calc(100vh - 320px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.faby-purchase-modal-global-container {
+  width: 100%;
+}
+
+.faby-purchse-title {
+  margin-bottom: 0;
+  padding-bottom: 15px;
+  font-size: 25px;
+}
+
+#purchaseModal #email_user {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+#purchaseModal .modal-footer {
+  padding: 0 20px 15px;
+  border-top: 0;
+}
+
+.purchase-modal-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.purchase-modal-button:hover {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.5s ease;
+}
+
+#successModal .modal-dialog {
+  max-width: 800px;
+}
+
+#successModal .modal-header {
+  padding: 15px 20px 0;
+  border-bottom: 0;
+}
+
+#successModal .modal-dialog {
+  max-width: 800px;
+}
+
+#successModal .modal-body {
+  min-height: calc(100vh - 320px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.faby-success-title {
+  margin-bottom: 0;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+.faby-success-subtitle {
+  margin-bottom: 0;
+  font-size: 25px;
+}
+
+#successModal .modal-footer {
+  padding: 0 20px 15px;
+  border-top: 0;
+}
+
+.success-modal-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.success-modal-button:hover {
+  background-color: #ffffff;
+  border: 1px solid #000000;
   color: #000000;
   transition: 0.5s ease;
 }

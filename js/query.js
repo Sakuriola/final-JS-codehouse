@@ -12,7 +12,7 @@ $(document).ready(() => {
 	$('#finishPurchase').on('click', () => {
 		let validateField = $('#email_user').val()
 		if (!validateField) {
-			alert('Ingresa un Email para poder procesar tu compra')
+			alert('Ingresa un email para poder procesar tu compra')
 		} else {
 			$('#purchaseModal').modal('hide')
 			$('#successModal').modal('show')

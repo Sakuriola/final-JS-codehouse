@@ -28,7 +28,7 @@
       <div class="faby-main-menu-container">
         <a class="faby-menu-link" href="./index.html">Inicio</a>
         <a class="faby-menu-link" href="./index.html">Nosotros</a>
-        <a class="faby-menu-link" href="/shop.html">Tienda</a>
+        <a class="faby-menu-link" href="#">Tienda</a>
         <a class="faby-menu-link" href="#">Contacto</a>
         <button id="openCartModal" type="button" class="btn btn-primary faby-cart-btn" data-toggle="modal"
           data-target="#cartModal">
@@ -43,14 +43,12 @@
     <h2 class="faby-shop-main-title">Favy Clothing</h2>
 
     <div class="faby-shop-main-container" id="mainLoader">
-      <h2 class="faby-shop-main-subtitle">CARGANDO</h2>
+      <h2 class="faby-shop-main-subtitle">C A R G A N D O</h2>
     </div>
 
 
     <div id="productMainList"></div>
   </div>
-
-
 
   <!-- Modal Stock -->
   <div class="modal fade" id="stockModal" tabindex="-1" role="dialog" aria-labelledby="stockModalLabel"
@@ -58,14 +56,19 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="stockModalLabel">Alerta!</h5>
+          <h5 class="modal-title" id="stockModalLabel">¡Alerta!</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">No hay mas Stock disponible de este producto!</div>
+        <div class="modal-body">
+          <div class="modal-stock-global-container">
+            <h3 class="modal-stock-title">¡No hay más stock disponible de este producto!</h3>
+            <h3 class="modal-stock-subtitle">Visita nuestra tienda para conocer más opciones</h3>
+          </div>
+        </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">
+          <button type="button" class="btn btn-primary stock-modal-button" data-dismiss="modal">
             Aceptar
           </button>
         </div>
@@ -79,7 +82,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Bolsa de compras</h5>
+          <h5 class="modal-title" id="cartModalLabel">Carrito de compras</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -88,21 +91,23 @@
 
         <div class="faby-cart-quantity-global-container">
           <div class="faby-cart-quantity-text-container">
-            <h2 class="quantity-products-list">
-              Total de productos: <span id="cartListModalQuantity"></span>
-            </h2>
-            <h2 class="total-products-list">
-              Precio total: <span id="cartListModalTotal"></span>
-            </h2>
+            <div>
+              <h2 class="quantity-products-list">
+                Total de productos: <span id="cartListModalQuantity"></span>
+              </h2>
+            </div>
+            <div>
+              <h2 class="total-products-list">
+                Precio total: <span id="cartListModalTotal"></span>
+              </h2>
+            </div>
+
           </div>
           <div class="faby-cart-quantity-button-container">
             <button id="clearCart">Vaciar carrito</button>
             <button id="finishCart">Finalizar compra</button>
           </div>
-
         </div>
-
-
       </div>
     </div>
   </div>
@@ -119,10 +124,15 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <h3>Ingresa tu Email:</h3>
-        <input id="email_user" name="email" />
+        <div class="modal-body">
+          <div class="faby-purchase-modal-global-container">
+            <h3 class="faby-purchse-title">Por favor, ingresa tu email:</h3>
+            <input id="email_user" name="email" />
+          </div>
+        </div>
+
         <div class="modal-footer">
-          <button id="finishPurchase" type="button" class="btn btn-primary" data-dismiss="modal">
+          <button id="finishPurchase" type="button" class="btn btn-primary purchase-modal-button" data-dismiss="modal">
             Aceptar
           </button>
         </div>
@@ -140,10 +150,15 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <h1>Enhorabuena!</h1>
-        <h3>hemos recibido tu compra, dentro de poco nos comunicaremos contigo.</h3>
+        <div class="modal-body">
+          <div class="faby-success-modal-global-container">
+            <h1 class="faby-success-title">¡Enhorabuena!</h1>
+            <h3 class="faby-success-subtitle">Hemos recibido tu compra, en breve se enviará un correo con los detalles
+              de tu compra</h3>
+          </div>
+        </div>
         <div class="modal-footer">
-          <button id="resetParameters" type="button" class="btn btn-primary" data-dismiss="modal">
+          <button id="resetParameters" type="button" class="btn btn-primary success-modal-button" data-dismiss="modal">
             Aceptar
           </button>
         </div>
@@ -156,13 +171,13 @@
       <div class="col-3 faby-footer-menu-container">
         <p class="faby-footer-menu-link-title">Menú</p>
 
-        <a href="index.html" class="faby-footer-menu-link">
+        <a href="./index.html" class="faby-footer-menu-link">
           <p>Inicio</p>
         </a>
-        <a href="#faby-about-us" class="faby-footer-menu-link">
+        <a href="./index.html" class="faby-footer-menu-link">
           <p>Nosotros</p>
         </a>
-        <a href="#faby-shop" class="faby-footer-menu-link">
+        <a href="#" class="faby-footer-menu-link">
           <p>Tienda</p>
         </a>
       </div>

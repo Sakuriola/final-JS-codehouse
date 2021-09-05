@@ -1,12 +1,12 @@
 /** @format */
 
 const ProductList = (item) => {
-	let list = document.createElement('div')
+	let list = document.createElement('ul')
 
 	list.className = 'item-product-list-global-container row'
 
 	item.forEach((e) => {
-		let li = document.createElement('div')
+		let li = document.createElement('li')
 		li.className = 'item-product-list-main-container col-xl-3 col-md-6 col-sm-12'
 		li.innerHTML = `<div class='item-product-list'>
 											<div class='item-product-list-image-container'>
@@ -119,7 +119,13 @@ const ModalCart = () => {
 		const cart = JSON.parse(localStorage.getItem('cart'))
 		const emptyCart = () => {
 			let container = document.createElement('div')
-			container.innerHTML = `<h1>No hay productos en el carrito</h1>`
+			container.innerHTML = `<div class="faby-empty-cart-global-container">
+																<div class="faby-empty-cart-main-container">
+																	<a class="faby-empty-cart-icon" href="./shop.html"><i class="fas fa-cart-plus"></i></a>
+																	<h3 class="faby-empty-cart-title">¡No hay productos en el carrito!</h3>
+																	<h3 class="faby-empty-cart-subtitle">Visita nuestra tienda para conocer nuestro catálogo</h3>
+																</div>
+															</div>`
 			document.getElementById('cartListModal').appendChild(container)
 			document.getElementsByClassName('quantity-products-list')[0].style.display = 'none'
 			document.getElementsByClassName('total-products-list')[0].style.display = 'none'
@@ -127,11 +133,11 @@ const ModalCart = () => {
 
 		if (cart.length > 0) {
 			const cartDisplayProducts = (data) => {
-				let list = document.createElement('div')
+				let list = document.createElement('ul')
 				list.className = 'item-product-cart-list-global-container row'
 
 				data.forEach((e) => {
-					let li = document.createElement('div')
+					let li = document.createElement('li')
 					li.className = 'item-product-cart-list-main-container col-5'
 
 					li.innerHTML = `
